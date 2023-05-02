@@ -24,5 +24,9 @@ const sumTotalCost = (accumulator, currentValue) => {
 const totalPrice = priceArray.reduce(sumTotalCost);
 console.log("$" + totalPrice);
 //print seasonal drinks
-
+const isSeasonal = (item) => {
+  return item.seasonal === true;
+};
+const seasonalItem = coffeeMenu.filter(isSeasonal);
+console.table(seasonalItem);
 //print seasonal with "with imported beans"asa
