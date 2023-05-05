@@ -12,7 +12,8 @@ const under5 = (item) => {
 const itemsUnder5 = coffeeMenu.filter(under5);
 console.log(itemsUnder5);
 //print even priced drinks
-
+const evenPrice = coffeeMenu.filter((coffeeMenu) => coffeeMenu.price % 2 === 0);
+console.table(evenPrice);
 //print total if ordering all drinks
 const findPriceArray = (item) => {
   return item.price;
@@ -30,3 +31,7 @@ const isSeasonal = (item) => {
 const seasonalItem = coffeeMenu.filter(isSeasonal);
 console.table(seasonalItem);
 //print seasonal with "with imported beans"asa
+const seasonalTotal = seasonalItem.map(
+  (coffeeMenu) => coffeeMenu.name + " with imported beans"
+);
+console.table(seasonalTotal);
